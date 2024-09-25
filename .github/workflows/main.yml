@@ -20,8 +20,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Import data
-        run: Rscript -e 'source("actions_print.R")'
-        run: Rscript -e 'source("hello.R")'
+        run: |
+          Rscript -e 'source("actions_print.R")'
+          Rscript -e 'source("hello.R")'
 
       - name: Commit results
         run: |
